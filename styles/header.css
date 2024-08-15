@@ -1,0 +1,44 @@
+header {
+    background-color: rgb(57, 45, 161);
+    padding:0.2em;
+    height: 2.5rem;
+}
+#header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 0 0 0.3em;   
+    height: 100%;
+}
+nav {
+    height: 100%;
+    width: 20%;
+}
+
+ul {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li{
+    width: 100%;
+    height: 100%;
+}
+
+#navbar_link {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(57, 45, 161);
+    transition: 0.5s;
+    color: white;
+    text-decoration: none;
+}
+
+#navbar_link:hover {
+    background-color: blueviolet;
+}
