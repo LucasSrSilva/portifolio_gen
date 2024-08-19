@@ -1,0 +1,18 @@
+@import url(../reset.css);
+@import url(header.css);
+@import url(main.css);
+@import url(../footer.css);
+
+* {
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 1.2rem;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    
+}

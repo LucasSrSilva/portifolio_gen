@@ -1,0 +1,101 @@
+header {
+    background-color: rgb(62, 38, 168);
+    box-shadow: rgba(50, 50, 93, 0.3) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header__menu-hamburguer {
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../../assets/menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+
+.container__botao {
+    display: none;
+}
+
+.container__botao:checked~.container__rotulo>.header__menu-hamburguer {
+    transition: 0.2s;
+    box-shadow: rgba(50, 50, 93, 0.3) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.lista-menu__item {
+    padding: 1rem;
+    background-color: rgb(62, 38, 168);
+}
+
+.lista-menu__link {
+    color: rgb(180, 134, 255);
+    text-decoration: none;
+}
+.lista-menu__link:active {
+    transition: 0.5s;
+    box-shadow: rgba(50, 50, 93, 0.3) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.header__titulo {
+    margin-left: 0.5rem;
+    color: rgb(180, 134, 255);
+    cursor: pointer;
+    user-select: none;
+}
+
+.navbar {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+    header {
+        height: 3.3rem;
+    }
+
+    .header__titulo {
+        margin-left: 10rem;
+    }
+
+    .navbar {
+        display: flex;
+        height: 100%;
+    }
+
+    .header__menu-hamburguer {
+        display: none;
+    }
+    .navbar__link{
+        padding: 1rem;
+        text-decoration: none;
+    }
+
+    .navbar__link:hover {
+        transition: 0.5s;
+        box-shadow: rgba(50, 50, 93, 0.3) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+
+    .navbar__texto {
+        color: rgb(180, 134, 255);
+    }
+}
