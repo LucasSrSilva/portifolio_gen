@@ -1,5 +1,8 @@
 const sobre = document.querySelector("#about");
 
+const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+const formulario = document.querySelector(".formulario")
+
 async function getApiGithub() {
     try {
         const dadosPerfil = await fetch(`https://api.github.com/users/lucasSrSilva`)
@@ -38,5 +41,21 @@ async function getApiGithub() {
         console.error(error);
     }
 }
+
+formulario.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const campoEmail = document.querySelector("#email");
+    const txtEmail = document.querySelector("#txtEmail");
+
+    if(!campoEmail.value.match(emailRegex)) {
+        txtEmail.innerHTML = "Digite um E-mail válido"
+        campoEmail.focus();
+        return;
+    }else {
+        txtEmail.innerHTML = "";
+    }
+    formulario.submit();
+})
 
 getApiGithub();
