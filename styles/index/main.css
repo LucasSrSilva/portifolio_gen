@@ -34,8 +34,11 @@ section {
 
 
 .sobre__imagem {
-    height: 10em;
+    height: 15em;
+    width: 15em;
     margin-right: 60vw;
+    border-radius: 50%;
+    border: 5px solid rgb(180, 134, 255);
 }
 
 #redes_sociais {
@@ -50,11 +53,17 @@ section {
         brightness(0) saturate(100%) invert(28%) sepia(26%) saturate(4087%) hue-rotate(242deg) brightness(94%) contrast(103%);
 }
 
+#contato {
+    display: flex;
+    align-items: center;
+}
+
 form {
     display: flex;
     flex-direction: column;
     margin: 70px 0px 0px 0px;
     padding: 24px;
+    width: 30%;
 }
 
 
